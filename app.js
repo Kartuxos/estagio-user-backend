@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL,
 
 app.use('/', cors())
 app.use('/', express.json());
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
    return res.send('hello world')
 })
 app.use('/user', userRauter);
